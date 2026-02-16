@@ -44,7 +44,11 @@ Datasets used during this internship are stored at the following locations:
 ```
 
 ### Training
-Modify `train_model.py` -> fill in correct model, data.yaml and training parameters  
+Modify `train_model.py` -> fill in correct model, data.yaml and training parameters.
+- YOLO('yolov12x.yaml'): loads yolov12x model with random weights, no pretraining. Use when training from scratch.
+- YOLO('yolov12x.pt'): loads yolov12x model pretrained on COCO dataset (large general dataset).
+- YOLO('/workspace/user/yolov12/runs/detect/train../weights/best.pt'): loads weights from your training run.
+  
 Modify `yolov12_train.sl` -> for more information about job scripts and submission: https://wiki.powerplant.pfr.co.nz/Slurm/faq
 
 In Putty terminal:
