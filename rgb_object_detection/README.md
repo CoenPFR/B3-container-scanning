@@ -50,7 +50,7 @@ Modify `yolov12_train.sl` -> for more information about job scripts and submissi
 In Putty terminal:
 ```bash
 # Submit job
-srun yolov12_train.sl
+sbatch yolov12_train.sl
 # Check job status
 squeue -u $USER
 # Follow progress of script
@@ -66,7 +66,7 @@ Modify `yolov12_val.sl`
 
 In Putty terminal:
 ```bash
-srun val_model
+sbatch val_model
 ```
 
 Evaluation metrics are stored in `yolov12_val.out`, and `\runs\detect\val..`
